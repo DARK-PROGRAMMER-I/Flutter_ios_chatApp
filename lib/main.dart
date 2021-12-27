@@ -27,10 +27,15 @@ class HomePage extends StatelessWidget {
 
 
         child: CupertinoTabScaffold(
+          resizeToAvoidBottomInset: true,
           tabBar: CupertinoTabBar(
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home_outlined)),
-              BottomNavigationBarItem(icon: Icon(Icons.people_alt_outlined))
+              BottomNavigationBarItem(icon: Icon(Icons.chat),
+              label: "Chats", tooltip: "Chats",
+              ),
+              BottomNavigationBarItem(icon: Icon(Icons.phone_outlined) , label: "Phone", tooltip: "Phone"),
+              BottomNavigationBarItem(icon: Icon(Icons.people_alt_outlined), label: "Contacts",tooltip: "Contacts"),
+              BottomNavigationBarItem(icon: Icon(Icons.settings_outlined), label: "Settings", tooltip: "Settings")
 
 
             ],
