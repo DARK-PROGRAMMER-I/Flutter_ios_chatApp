@@ -1,3 +1,7 @@
+import 'package:chap_app/screens/calls.dart';
+import 'package:chap_app/screens/chats.dart';
+import 'package:chap_app/screens/contacts.dart';
+import 'package:chap_app/screens/settings.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 
@@ -20,6 +24,7 @@ class MyApp extends StatelessWidget{
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
+  var screens= [Chats(), Calls(), Contacts(), Settings()];
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +46,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
           tabBuilder: (BuildContext context, int index){
-            return Container(
-              child: Center(
-                child: Text("$index"),
-
-              ),
-            );
+            return screens[index];
           },
         )
 
